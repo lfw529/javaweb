@@ -1,18 +1,19 @@
-package com.atguigu.qqzone.pojo;
+package com.lfw.qqzone.pojo;
 
 import java.util.Date;
 import java.util.List;
 
 public class Topic {
-    private Integer id ;
-    private String title ;
-    private String content ;
-    private Date topicDate ;
-    private UserBasic author ;          //M:1
+    private Integer id;
+    private String title;
+    private String content;
+    private Date topicDate;
+    private UserBasic author;          //M:1
 
-    private List<Reply> replyList ;     //1:N
+    private List<Reply> replyList;     //1:N
 
-    public Topic(){}
+    public Topic() {
+    }
 
     public Topic(Integer id) {
         this.id = id;

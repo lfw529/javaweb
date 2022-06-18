@@ -1,16 +1,16 @@
-package com.atguigu.qqzone.dao.impl;
+package com.lfw.qqzone.dao.impl;
 
-import com.atguigu.myssm.basedao.BaseDAO;
-import com.atguigu.qqzone.dao.TopicDAO;
-import com.atguigu.qqzone.pojo.Topic;
-import com.atguigu.qqzone.pojo.UserBasic;
+import com.lfw.myssm.basedao.BaseDAO;
+import com.lfw.qqzone.dao.TopicDAO;
+import com.lfw.qqzone.pojo.Topic;
+import com.lfw.qqzone.pojo.UserBasic;
 
 import java.util.List;
 
 public class TopicDAOImpl extends BaseDAO<Topic> implements TopicDAO {
     @Override
     public List<Topic> getTopicList(UserBasic userBasic) {
-        return super.executeQuery("select * from t_topic where author = ? " , userBasic.getId());
+        return super.executeQuery("select * from t_topic where author = ? ", userBasic.getId());
     }
 
     @Override
@@ -20,7 +20,7 @@ public class TopicDAOImpl extends BaseDAO<Topic> implements TopicDAO {
 
     @Override
     public void delTopic(Topic topic) {
-        executeUpdate("delete from t_topic where id = ? " , topic.getId());
+        executeUpdate("delete from t_topic where id = ? ", topic.getId());
     }
 
     @Override

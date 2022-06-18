@@ -1,16 +1,17 @@
-package com.atguigu.qqzone.pojo;
+package com.lfw.qqzone.pojo;
 
 import java.sql.Date;
 
 public class UserDetail {
-    private Integer id ;
-    private String realName ;
-    private String tel ;
-    private String email ;
-    private Date birth ;
-    private String star ;
+    private Integer id;
+    private String realName;
+    private String tel;
+    private String email;
+    private Date birth;
+    private String star;
 
-    public UserDetail(){}
+    public UserDetail() {
+    }
 
     public Integer getId() {
         return id;

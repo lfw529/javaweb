@@ -1,12 +1,12 @@
-package com.atguigu.qqzone.service.impl;
+package com.lfw.qqzone.service.impl;
 
-import com.atguigu.qqzone.dao.HostReplyDAO;
-import com.atguigu.qqzone.pojo.HostReply;
-import com.atguigu.qqzone.service.HostReplyService;
+import com.lfw.qqzone.dao.HostReplyDAO;
+import com.lfw.qqzone.pojo.HostReply;
+import com.lfw.qqzone.service.HostReplyService;
 
 public class HostReplyServiceImpl implements HostReplyService {
 
-    private HostReplyDAO hostReplyDAO ;
+    private HostReplyDAO hostReplyDAO;
 
     @Override
     public HostReply getHostReplyByReplyId(Integer replyId) {

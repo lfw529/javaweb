@@ -1,8 +1,9 @@
-package com.atguigu.qqzone.service;
+package com.lfw.qqzone.service;
 
-import com.atguigu.qqzone.pojo.HostReply;
+import com.lfw.qqzone.pojo.HostReply;
 
 public interface HostReplyService {
     HostReply getHostReplyByReplyId(Integer replyId);
+
     void delHostReply(Integer id);
 }

@@ -8,7 +8,7 @@ review:
 4. 在上一个版本中我们使用了反射技术，但是其实还是存在一定的问题：每一个servlet中都有类似的反射技术的代码。因此继续抽取，设计了中央控制器类：DispatcherServlet
    DispatcherServlet这个类的工作分为两大部分： 1.根据url定位到能够处理这个请求的controller组件： 1)从url中提取servletPath : /fruit.do -> fruit 2)
    根据fruit找到对应的组件:FruitController ， 这个对应的依据我们存储在applicationContext.xml中
-   <bean id="fruit" class="com.atguigu.fruit.controllers.FruitController/>
+   <bean id="fruit" class="com.lfw.fruit.controllers.FruitController/>
    通过DOM技术我们去解析XML文件，在中央控制器中形成一个beanMap容器，用来存放所有的Controller组件 3)根据获取到的operate的值定位到我们FruitController中需要调用的方法
    2.调用Controller组件中的方法：
     1) 获取参数 获取即将要调用的方法的参数签名信息: Parameter[] parameters = method.getParameters(); 通过parameter.getName()获取参数的名称；
@@ -32,7 +32,7 @@ review:
 3) 在web.xml文件中配置Servlet
    <servlet>
    <servlet-name>Demo01Servlet</servlet-name>
-   <servlet-class>com.atguigu.servlet.Demo01Servlet</servlet-class>
+   <servlet-class>com.lfw.servlet.Demo01Servlet</servlet-class>
    <init-param>
    <param-name>hello</param-name>
    <param-value>world</param-value>
